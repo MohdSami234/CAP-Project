@@ -1,0 +1,82 @@
+<mvc:View
+    controllerName="project1.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt">
+
+    <tnt:ToolPage id="toolPage">
+
+        <!-- Header -->
+        <tnt:header>
+
+            <tnt:ToolHeader id="header">
+
+                <Button
+                    id="menuBtn"
+                    icon="sap-icon://menu2"
+                    press="onToggle"/>
+
+                <Title
+                    id="title"
+                    text="WILLOWOOD Delight"/>
+
+                <ToolbarSpacer/>
+
+                <Button icon="sap-icon://bell"/>
+                <Button icon="sap-icon://sys-help"/>
+                <Button icon="sap-icon://email"/>
+
+            </tnt:ToolHeader>
+
+        </tnt:header>
+
+        <!-- Side Navigation -->
+        <tnt:sideContent>
+
+            <tnt:SideNavigation
+                id="sideNavigation"
+                expanded="true">
+
+                <tnt:NavigationList>
+
+                    <tnt:NavigationListItem
+                        text="Sales Management"
+                        icon="sap-icon://sales-order"/>
+
+                    <tnt:NavigationListItem
+                        text="HR Management"
+                        icon="sap-icon://employee"/>
+
+                    <tnt:NavigationListItem
+                        text="Marketing"
+                        icon="sap-icon://marketing-campaign"/>
+
+                    <tnt:NavigationListItem
+                        text="Reports"
+                        icon="sap-icon://business-objects-experience"/>
+
+                </tnt:NavigationList>
+
+            </tnt:SideNavigation>
+
+        </tnt:sideContent>
+
+        <!-- Main Content -->
+        <tnt:mainContents>
+
+            <Page id="mainPage" showHeader="false">
+
+                <content>
+
+                    <Title
+                        text="Dashboard"/>
+
+                </content>
+
+            </Page>
+
+        </tnt:mainContents>
+
+    </tnt:ToolPage>
+
+</mvc:View>
