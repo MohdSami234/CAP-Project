@@ -42,6 +42,19 @@ annotate service.Incidents with @(
             Label : 'General Information',
             Target : '@UI.FieldGroup#GeneratedGroup',
         },
+        {
+            $Type : 'UI.CollectionFacet',
+            Label : '{i18n>Overview}',
+            ID : 'i18nOverview',
+            Facets : [
+                {
+                    $Type : 'UI.ReferenceFacet',
+                    Label : '{i18n>Details}',
+                    ID : 'i18nDetails',
+                    Target : '@UI.FieldGroup#i18nDetails',
+                },
+            ],
+        },
     ],
     UI.LineItem : [
         {
@@ -70,6 +83,24 @@ annotate service.Incidents with @(
             Value : urgency_code,
         },
     ],
+    UI.HeaderInfo : {
+        Title : {
+            $Type : 'UI.DataField',
+            Value : title,
+        },
+        TypeName : '',
+        TypeNamePlural : '',
+        Description : {
+            $Type : 'UI.DataField',
+            Value : status.name,
+        },
+        TypeImageUrl : 'sapicon://alert.',
+    },
+    UI.FieldGroup #i18nDetails : {
+        $Type : 'UI.FieldGroupType',
+        Data : [
+        ],
+    },
 );
 
 annotate service.Incidents with {
